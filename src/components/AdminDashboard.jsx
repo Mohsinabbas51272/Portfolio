@@ -14,7 +14,6 @@ const AdminDashboard = ({ onBack }) => {
     const unsubscribe = onValue(contactRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Convert object to array and sort by latest
         const responsesList = Object.keys(data).map(key => ({
           ...data[key],
           id: key
@@ -22,6 +21,11 @@ const AdminDashboard = ({ onBack }) => {
         setResponses(responsesList);
       } else {
         setResponses([]);
+      }
+    }, (error) => {
+      console.error("Firebase Read Error:", error);
+      if (error.message.includes("permission_denied")) {
+        alert("Permission Denied! Please check your Firebase Database Rules.");
       }
     });
 
