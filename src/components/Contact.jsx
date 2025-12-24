@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Send, MapPin, Mail, Phone, CheckCircle } from 'lucide-react';
+import { ref, push } from 'firebase/database';
+import { db } from '../firebase';
 import './Contact.css';
 
 const Contact = () => {
@@ -18,21 +20,25 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Save to localStorage
-    const existingResponses = JSON.parse(localStorage.getItem('contact_responses') || '[]');
+    // Save to Firebase
+    const contactRef = ref(db, 'contact_responses');
     const newResponse = {
       ...formData,
-      id: Date.now(),
-      date: new Date().toLocaleString()
+      date: new Date().toLocaleString(),
+      timestamp: Date.now()
     };
     
-    localStorage.setItem('contact_responses', JSON.stringify([newResponse, ...existingResponses]));
-    
-    setSubmitted(true);
-    setFormData({ name: '', email: '', project: '' });
-    
-    // Reset submission message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+    push(contactRef, newResponse)
+      .then(() => {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', project: '' });
+        // Reset submission message after 5 seconds
+        setTimeout(() => setSubmitted(false), 5000);
+      })
+      .catch((error) => {
+        console.error("Error saving to Firebase:", error);
+        alert("Failed to send message. Please try again.");
+      });
   };
 
   return (

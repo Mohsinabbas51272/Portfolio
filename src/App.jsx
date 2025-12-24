@@ -11,7 +11,15 @@ import './index.css'
 function App() {
   const [view, setView] = useState('portfolio');
 
-  const goToAdmin = () => setView('admin');
+  const goToAdmin = () => {
+    const password = window.prompt("Enter Admin Password:");
+    if (password === 'Admin@123') {
+      setView('admin');
+    } else if (password !== null) {
+      alert("Unauthorized Access!");
+    }
+  };
+
   const goToPortfolio = () => setView('portfolio');
 
   return (

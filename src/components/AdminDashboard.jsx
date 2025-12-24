@@ -1,25 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Trash2, User, Mail, MessageSquare, Calendar } from 'lucide-react';
+import { ref, onValue, remove } from 'firebase/database';
+import { db } from '../firebase';
 import './AdminDashboard.css';
 
 const AdminDashboard = ({ onBack }) => {
   const [responses, setResponses] = useState([]);
 
   useEffect(() => {
-    const savedResponses = JSON.parse(localStorage.getItem('contact_responses') || '[]');
-    setResponses(savedResponses);
+    const contactRef = ref(db, 'contact_responses');
+    
+    // Listen for data changes in real-time
+    const unsubscribe = onValue(contactRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        // Convert object to array and sort by latest
+        const responsesList = Object.keys(data).map(key => ({
+          ...data[key],
+          id: key
+        })).reverse();
+        setResponses(responsesList);
+      } else {
+        setResponses([]);
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const handleDelete = (id) => {
-    const updatedResponses = responses.filter(r => r.id !== id);
-    setResponses(updatedResponses);
-    localStorage.setItem('contact_responses', JSON.stringify(updatedResponses));
+    if (window.confirm('Delete this response?')) {
+      const responseRef = ref(db, `contact_responses/${id}`);
+      remove(responseRef);
+    }
   };
 
   const clearAll = () => {
     if (window.confirm('Are you sure you want to clear all responses?')) {
-      setResponses([]);
-      localStorage.removeItem('contact_responses');
+      const contactRef = ref(db, 'contact_responses');
+      remove(contactRef);
     }
   };
 
