@@ -50,8 +50,8 @@
 .input-group input,
 .input-group textarea {
     width: 100%;
-    background: #F8FAFC;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
     padding: 16px 20px;
     border-radius: 12px;
     color: var(--text-main);
@@ -64,7 +64,7 @@
 .input-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    background: white;
+    background: var(--bg-white);
     box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
 }
 
@@ -74,7 +74,7 @@
 
 .footer-line {
     height: 1px;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--glass-border);
     margin-bottom: 40px;
 }
 

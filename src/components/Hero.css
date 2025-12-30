@@ -84,8 +84,8 @@
     align-items: center;
     gap: 10px;
     padding: 10px 24px;
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--bg-white);
+    border: 1px solid var(--glass-border);
     border-radius: 100px;
     color: var(--text-main);
     font-size: 0.95rem;
@@ -105,8 +105,8 @@
 }
 
 .visual-card {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--bg-white);
+    border: 1px solid var(--glass-border);
     border-radius: 24px;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
@@ -115,12 +115,12 @@
 }
 
 .card-header {
-    background: #F8FAFC;
+    background: var(--bg-light);
     padding: 14px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .dots {
@@ -159,7 +159,7 @@
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-main);
-    background: #fff;
+    background: var(--bg-white);
 }
 
 .glow-sphere {

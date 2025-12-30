@@ -6,33 +6,55 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: "DocuCollab System",
+      title: "Doc-collab-system",
       category: "Full Stack",
       description: "A high-performance real-time collaboration engine using WebSocket technology.",
-      github: "https://github.com/Mohsinabbas51272",
+      github: "https://github.com/Mohsinabbas51272/Dacument-collaboration-system.git",
       tags: ["React", "Express", "Socket.io", "MongoDB"]
     },
     {
-      title: "Royal Jewelry",
+      title: "Royal-Jewelry",
       category: "E-Commerce",
       description: "Boutique digital storefront focusing on luxury jewelry presentation.",
       github: "https://github.com/Mohsinabbas51272/JewlleryShop",
       tags: ["React", "CSS3", "Vite"]
     },
     {
-      title: "Motion Metrics",
+      title: "DTS-Calculator",
       category: "Utility",
       description: "Precision calculator for physical motion parameters and kinematics.",
       github: "https://github.com/Mohsinabbas51272/DistanceTimeSpeedCalculator",
       tags: ["JavaScript", "Algorithm", "UI"]
-    }
+    },
+     {
+      title: "Animation-Website",
+      category: "React",
+      description: "Animated website using React and Framer Motion.",
+      github: "https://github.com/Mohsinabbas51272/Animation.git",
+      tags: ["React"]
+    },
+    {
+      title: "Playground-Website",
+      category: "Frontend",
+      description: "Playground website using React and Framer Motion, interactive UI.",
+      github: "https://github.com/Mohsinabbas51272/Playground.git",
+      tags: ["React", "CSS3", "Vite"]
+    },
+    {
+      title: "Data-Fetching-Website",
+      category: "Utility",
+      description: "Website for fetching data from an API, interactive UI,waiting response.",
+      github: "https://github.com/Mohsinabbas51272/DataFetching.git",
+      tags: ["JavaScript", "Algorithm", "API"]
+    },
+    
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="section-header">
-        <span className="text-gradient">02. Portfolio</span>
-        <h2 className="section-title">Curated Projects</h2>
+        <span className="text-gradient">02. Projects</span>
+        <h2 className="section-title">Projects</h2>
       </div>
 
       <div className="projects-grid">
@@ -45,15 +67,12 @@ const Projects = () => {
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="project-image-placeholder">
-               <Code size={40} className="placeholder-icon" />
-            </div>
+          
             
             <div className="project-top">
               <span className="cat">{project.category}</span>
               <div className="links">
                 <a href={project.github} target="_blank" rel="noreferrer"><Github size={20} /></a>
-                <a href="#" className="main-link"><ArrowUpRight size={20} /></a>
               </div>
             </div>
             

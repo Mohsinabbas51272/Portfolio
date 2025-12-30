@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Palette } from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = ({ onNameClick }) => {
+const Navbar = ({ onNameClick, theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -35,11 +35,19 @@ const Navbar = ({ onNameClick }) => {
               {link.name}
             </a>
           ))}
+          <button className="theme-toggle" onClick={toggleTheme} title={`Current Theme: ${theme}`}>
+            <Palette size={20} />
+          </button>
           <a href="#contact" className="btn-primary">Get Started</a>
         </div>
 
-        <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X /> : <Menu />}
+        <div className="mobile-toggle-group">
+          <button className="theme-toggle" onClick={toggleTheme} style={{ marginRight: '15px' }}>
+            <Palette size={20} />
+          </button>
+          <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </div>
         </div>
       </div>
 

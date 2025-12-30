@@ -10,9 +10,9 @@
 
 .navbar.scrolled {
     padding: 16px 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--glass);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--glass-border);
     box-shadow: var(--shadow-sm);
 }
 
@@ -46,8 +46,30 @@
     color: var(--primary);
 }
 
-.mobile-toggle {
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.mobile-toggle-group {
     display: none;
+    align-items: center;
+}
+
+.mobile-toggle {
     cursor: pointer;
     color: var(--text-main);
 }
@@ -57,14 +79,14 @@
     top: 100%;
     left: 24px;
     right: 24px;
-    background: white;
+    background: var(--bg-white);
     padding: 24px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
     margin-top: 12px;
 }
 
@@ -73,7 +95,7 @@
         display: none;
     }
 
-    .mobile-toggle {
-        display: block;
+    .mobile-toggle-group {
+        display: flex;
     }
 }

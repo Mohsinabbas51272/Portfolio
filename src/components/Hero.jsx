@@ -17,13 +17,13 @@ const Hero = () => {
               <span className="dot"></span>
               Expertise In Web Development
             </div>
-          <h1 className="hero-title">
-  Where Ideas Turn Into <br />
-  <span className="text-gradient">Digital Impact</span>
-</h1>
-            <p className="hero-subtitle">
-I'm Mohsin Abbas — a Software Developer building modern, efficient, and
-scalable web experiences.
+                  <h1 className="hero-title">
+          Where Ideas turn Into 
+          <span className="text-gradient">Digital Impact</span>
+        </h1>
+                    <p className="hero-subtitle">
+            I'm Mohsin Abbas — a Software Developer building modern, efficient, and
+            scalable web experiences.
             </p>
             
             <div className="hero-actions">

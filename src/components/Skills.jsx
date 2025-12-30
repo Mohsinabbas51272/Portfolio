@@ -1,14 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ShieldCheck, Cpu, Globe } from 'lucide-react';
+import { Zap, ShieldCheck, Cpu, Globe, Server, Code, Atom, Layers, FileCode, Database, Lock, Gauge, TestTube, GitBranch, Github, Smartphone, Figma, Terminal } from 'lucide-react';
 import './Skills.css';
 
 const Skills = () => {
   const skills = [
-    { name: "Frontend Architecture", level: "Expert", icon: <Zap /> },
-    { name: "Backend Development", level: "Advanced", icon: <Cpu /> },
-    { name: "Data Structures & Algorithms", level: "Advanced", icon: <ShieldCheck /> },
-    { name: "Responsive UI/UX", level: "Expert", icon: <Globe /> }
+    { name: "Frontend-Architecture", level: "Expert", icon: <Zap /> },
+    { name: "Backend Development", level: "advanced", icon: <Cpu /> },
+    { name: "Data-Structures & Algorithms", level: "Advanced", icon: <ShieldCheck /> },
+    { name: "Responsive UI/UX", level: "Expert", icon: <Globe /> },
+    { name: "RESTful APIs", level: "Advanced", icon: <Server /> },
+    { name: "GraphQL", level: "Intermediate", icon: <Code /> },
+    { name: "React.js", level: "Expert", icon: <Atom /> },
+    { name: "Next.js", level: "Advanced", icon: <Layers /> },
+    { name: "JavaScript (ES6+)", level: "Expert", icon: <FileCode /> },
+    { name: "TypeScript", level: "Advanced", icon: <Code /> },
+    { name: "Node.js", level: "Advanced", icon: <Terminal /> },
+    { name: "Express.js", level: "Advanced", icon: <Server /> },
+    { name: "Database Design (SQL/NoSQL)", level: "Advanced", icon: <Database /> },
+    { name: "MongoDB", level: "Advanced", icon: <Database /> },
+    { name: "Authentication & Authorization", level: "Advanced", icon: <Lock /> },
+    { name: "Web Performance Optimization", level: "Advanced", icon: <Gauge /> },
+    { name: "Version Control (Git/GitHub)", level: "Expert", icon: <Github /> },
+    { name: "Graphical Design & Figma", level: "Intermediate", icon: <Figma /> }
   ];
 
   return (

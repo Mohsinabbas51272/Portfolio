@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,6 +10,20 @@ import './index.css'
 
 function App() {
   const [view, setView] = useState('portfolio');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  const themes = ['light', 'dark', 'midnight', 'sunset', 'ocean'];
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const currentIndex = themes.indexOf(theme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    setTheme(themes[nextIndex]);
+  };
 
   const goToAdmin = () => {
     const password = window.prompt("Enter Admin Password:");
@@ -26,7 +40,7 @@ function App() {
     <div className="app">
       {view === 'portfolio' ? (
         <>
-          <Navbar onNameClick={goToAdmin} />
+          <Navbar onNameClick={goToAdmin} theme={theme} toggleTheme={toggleTheme} />
           <main>
             <Hero />
             <About />
