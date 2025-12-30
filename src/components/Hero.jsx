@@ -21,7 +21,7 @@ const Hero = () => {
           Mohsin <span className="text-gradient">Abbas</span>
         </h1>
                     <p className="hero-subtitle">
-            I'm Mohsin Abbas — a Software Developer building modern, efficient, and
+            A Software Developer building modern, efficient, and
             scalable web experiences.
             </p>
             
