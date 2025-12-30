@@ -18,8 +18,7 @@ const Hero = () => {
               Expertise In Web Development
             </div>
                   <h1 className="hero-title">
-          Where Ideas turn Into 
-          <span className="text-gradient">Digital Impact</span>
+          Mohsin <span className="text-gradient">Abbas</span>
         </h1>
                     <p className="hero-subtitle">
             I'm Mohsin Abbas — a Software Developer building modern, efficient, and
