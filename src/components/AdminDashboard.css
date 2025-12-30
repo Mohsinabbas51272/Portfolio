@@ -1,17 +1,15 @@
 .admin-dashboard {
     min-height: 100vh;
-    padding: 100px 5% 50px;
-    background: var(--bg-primary);
-    color: var(--text-primary);
+    padding: 120px 5% 50px;
 }
 
 .admin-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 
 .admin-header h1 {
@@ -24,26 +22,28 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-secondary);
-    padding: 10px 20px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-main);
+    padding: 10px 24px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
 }
 
 .back-btn:hover {
-    background: var(--gold-gradient);
-    color: black;
-    border-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(-4px);
 }
 
 .clear-btn:hover:not(:disabled) {
-    background: rgba(255, 0, 0, 0.2);
-    color: #ff4d4d;
-    border-color: #ff4d4d;
+    background: #FEE2E2;
+    color: #DC2626;
+    border-color: #FCA5A5;
 }
 
 .clear-btn:disabled {
@@ -61,10 +61,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px 20px;
+    padding: 100px 24px;
     text-align: center;
     gap: 20px;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .no-responses .icon {
@@ -73,69 +73,62 @@
 
 .responses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
 }
 
 .response-card {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     transition: transform 0.3s ease;
-}
-
-.response-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(212, 175, 55, 0.3);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .date {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+    font-size: 0.85rem;
+    color: var(--text-muted);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    font-weight: 600;
 }
 
 .delete-btn {
     background: transparent;
     border: none;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 6px;
+    border-radius: 8px;
     transition: all 0.2s;
 }
 
 .delete-btn:hover {
-    color: #ff4d4d;
-    background: rgba(255, 77, 77, 0.1);
+    color: #DC2626;
+    background: #FEE2E2;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .info-row {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     align-items: flex-start;
 }
 
 .info-row .icon {
-    color: var(--gold-primary);
-    margin-top: 5px;
+    color: var(--primary);
+    margin-top: 4px;
     flex-shrink: 0;
 }
 
@@ -143,22 +136,24 @@
     display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 2px;
 }
 
 .info-row .value {
     font-size: 1rem;
-    color: var(--text-primary);
+    color: var(--text-main);
     line-height: 1.5;
+    font-weight: 600;
 }
 
 .project-info {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
+    background: #F8FAFC;
+    padding: 16px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -172,7 +167,7 @@
 
     .admin-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         text-align: center;
     }
 }

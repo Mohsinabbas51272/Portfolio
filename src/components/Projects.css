@@ -1,33 +1,54 @@
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
 }
 
 .project-premium-card {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 220px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.placeholder-icon {
+    opacity: 0.5;
 }
 
 .project-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    padding: 24px 24px 12px;
 }
 
-.project-top .icon {
+.project-top .cat {
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .project-top .links {
     display: flex;
-    gap: 15px;
+    gap: 16px;
 }
 
 .project-top a {
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .project-top a:hover {
@@ -36,43 +57,35 @@
 
 .project-body {
     flex: 1;
-}
-
-.project-body .cat {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: 8px;
+    padding: 0 24px 24px;
 }
 
 .project-body h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-weight: 800;
 }
 
 .project-body p {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     font-size: 1rem;
-    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    padding: 0 24px 24px;
 }
 
 .project-tags .tag {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
+    padding: 4px 12px;
+    background: #F1F5F9;
     border-radius: 6px;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 @media (max-width: 480px) {

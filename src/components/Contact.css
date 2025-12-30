@@ -6,7 +6,7 @@
 }
 
 .contact-list {
-    margin-top: 50px;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -15,7 +15,7 @@
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .contact-item .icon {
@@ -28,15 +28,17 @@
 }
 
 .contact-item .label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: var(--text-secondary);
+    color: var(--primary);
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .contact-item .value {
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-main);
 }
 
 .premium-form {
@@ -48,12 +50,13 @@
 .input-group input,
 .input-group textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--glass-border);
+    background: #F8FAFC;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 16px 20px;
     border-radius: 12px;
-    color: var(--text-primary);
+    color: var(--text-main);
     font-family: inherit;
+    font-weight: 500;
     transition: all 0.3s;
 }
 
@@ -61,7 +64,8 @@
 .input-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
 }
 
 .premium-footer {
@@ -70,7 +74,7 @@
 
 .footer-line {
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+    background: rgba(0, 0, 0, 0.05);
     margin-bottom: 40px;
 }
 
@@ -88,8 +92,8 @@
 }
 
 .footer-content p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 @media (max-width: 968px) {
@@ -111,17 +115,18 @@
 }
 
 .success-icon {
-    color: #4ade80;
+    color: #22C55E;
     margin-bottom: 10px;
 }
 
 .submission-success h3 {
-    font-size: 1.5rem;
-    color: var(--text-primary);
+    font-size: 1.6rem;
+    color: var(--text-main);
+    font-weight: 800;
 }
 
 .submission-success p {
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 @keyframes fadeIn {

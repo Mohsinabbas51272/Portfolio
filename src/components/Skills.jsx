@@ -22,7 +22,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div 
             key={index}
-            className="skill-premium-box glass-card"
+            className="skill-premium-box white-card"
             whileHover={{ y: -5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

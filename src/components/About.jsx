@@ -12,7 +12,7 @@ const About = () => {
 
       <div className="about-content">
         <motion.div 
-          className="about-info glass-card"
+          className="about-info white-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,11 +41,11 @@ const About = () => {
         </motion.div>
 
         <div className="about-stats">
-          <div className="stat-box glass-card">
+          <div className="stat-box white-card">
             <span className="number">3+</span>
             <span className="label">Live Projects</span>
           </div>
-          <div className="stat-box glass-card">
+          <div className="stat-box white-card">
             <span className="number">A+</span>
             <span className="label">Academic Performance</span>
           </div>

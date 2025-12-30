@@ -60,14 +60,14 @@ const AdminDashboard = ({ onBack }) => {
 
       <div className="responses-container">
         {responses.length === 0 ? (
-          <div className="no-responses glass-card">
+          <div className="no-responses white-card">
             <MessageSquare size={48} className="icon" />
             <p>No responses yet. Submissions will appear here.</p>
           </div>
         ) : (
           <div className="responses-grid">
             {responses.map((resp) => (
-              <div key={resp.id} className="response-card glass-card">
+              <div key={resp.id} className="response-card white-card">
                 <div className="card-header">
                   <span className="date">
                     <Calendar size={14} /> {resp.date}

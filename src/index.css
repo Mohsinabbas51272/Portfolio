@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --primary: #D4AF37;
-  --primary-glow: rgba(212, 175, 55, 0.4);
-  --secondary: #F7E7CE;
-  --bg-dark: #050505;
-  --bg-surface: #0a0a0a;
-  --text-primary: #F8FAFC;
-  --text-secondary: #94a3b8;
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(212, 175, 55, 0.1);
-  --font-heading: 'Sora', sans-serif;
+  --primary: #0066FF;
+  --primary-light: #E0E7FF;
+  --primary-gradient: linear-gradient(135deg, #0066FF 0%, #00B2FF 100%);
+  --secondary: #6366F1;
+  --bg-light: #F8FAFC;
+  --bg-white: #FFFFFF;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 * {
@@ -22,13 +26,13 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
+  background-color: var(--bg-light);
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
   background-image:
-    radial-gradient(circle at 2px 2px, rgba(212, 175, 55, 0.05) 1px, transparent 0);
-  background-size: 40px 40px;
+    radial-gradient(at 0% 0%, hsla(210, 100%, 95%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(220, 100%, 95%, 1) 0, transparent 50%);
 }
 
 h1,
@@ -37,12 +41,13 @@ h3,
 h4 {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
+  color: var(--text-main);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
 }
 
 ul {
@@ -50,70 +55,62 @@ ul {
 }
 
 section {
-  padding: 100px 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.container {
+  padding: 120px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.glass-card {
-  background: var(--glass);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.white-card {
+  background: var(--bg-white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
   padding: 32px;
-  transition: all 0.4s ease;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
 }
 
-.glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.3);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+.white-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Premium Typography */
 .text-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #F7E7CE 50%, #D4AF37 100%);
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shine 4s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+  display: inline-block;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, #A67C00 100%);
-  color: #050505;
-  padding: 14px 32px;
-  border-radius: 12px;
-  font-weight: 700;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px var(--primary-glow);
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--primary-glow);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.4);
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: 800;
-  margin-bottom: 60px;
-  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.1;
 }
 
 /* Custom Scrollbar */
@@ -122,11 +119,11 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--glass-border);
+  background: #CBD5E1;
   border-radius: 10px;
 }
 

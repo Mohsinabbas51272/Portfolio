@@ -44,7 +44,7 @@ const Navbar = ({ onNameClick }) => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="mobile-menu glass-card">
+        <div className="mobile-menu">
           {navLinks.map((link) => (
             <a 
               key={link.name} 

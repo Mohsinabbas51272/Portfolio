@@ -73,7 +73,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="premium-form glass-card" onSubmit={handleSubmit}>
+        <form className="premium-form white-card" onSubmit={handleSubmit}>
           {submitted ? (
             <div className="submission-success">
               <CheckCircle size={48} className="success-icon" />
