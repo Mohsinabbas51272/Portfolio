@@ -101,6 +101,22 @@
         grid-template-columns: 1fr;
         gap: 60px;
     }
+
+    .contact-list {
+        align-items: center;
+    }
+
+    .contact-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 .submission-success {

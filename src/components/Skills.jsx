@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Zap, ShieldCheck, Cpu, Globe, Server, Code, Atom, Layers, FileCode, Database, Lock, Gauge, TestTube, GitBranch, Github, Smartphone, Figma, Terminal } from 'lucide-react';
 import './Skills.css';
@@ -34,7 +35,7 @@ const Skills = () => {
 
       <div className="skills-grid">
         {skills.map((skill, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="skill-premium-box white-card"
             whileHover={{ y: -5 }}

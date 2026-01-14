@@ -35,3 +35,13 @@
     color: var(--text-muted);
     letter-spacing: 0.05em;
 }
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-premium-box {
+        gap: 16px;
+    }
+}

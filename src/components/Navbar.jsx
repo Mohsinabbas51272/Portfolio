@@ -52,19 +52,22 @@ const Navbar = ({ onNameClick, theme, toggleTheme }) => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="mobile-menu">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="nav-link"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a href="#contact" className="btn-primary" onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
-        </div>
+        <>
+          <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>
+          <div className="mobile-menu">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-link"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <a href="#contact" className="btn-primary" onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
+          </div>
+        </>
       )}
     </nav>
   );

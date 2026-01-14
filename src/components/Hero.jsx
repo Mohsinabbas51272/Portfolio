@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import './Hero.css';
@@ -8,7 +9,7 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-grid">
         <div className="hero-content">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -17,14 +18,14 @@ const Hero = () => {
               <span className="dot"></span>
               Expertise In Web Development
             </div>
-                  <h1 className="hero-title">
-          Mohsin <span className="text-gradient">Abbas</span>
-        </h1>
-                    <p className="hero-subtitle">
-            A Software Developer building modern, efficient, and
-            scalable web experiences.
+            <h1 className="hero-title">
+              Mohsin <span className="text-gradient">Abbas</span>
+            </h1>
+            <p className="hero-subtitle">
+              A Software Developer building modern, efficient, and
+              scalable web experiences.
             </p>
-            
+
             <div className="hero-actions">
               <a href="#projects" className="btn-primary">
                 Explore Portfolio <ArrowUpRight size={20} style={{ marginLeft: '8px' }} />
@@ -42,9 +43,9 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        
+
         <div className="hero-visual">
-          <motion.div 
+          <motion.div
             className="visual-card glass-card"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

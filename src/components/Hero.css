@@ -199,7 +199,35 @@
         align-items: center;
     }
 
+    .social-stack {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .premium-badge {
         margin: 0 auto 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .visual-card {
+        border-radius: 16px;
+    }
+
+    .code-block {
+        padding: 20px;
+        font-size: 0.85rem;
     }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import './About.css';
 
 const About = () => {
- return (
+  return (
     <section id="about" className="about">
       <div className="section-header">
         <span className="text-gradient">01. Discovery</span>
@@ -11,23 +12,23 @@ const About = () => {
       </div>
 
       <div className="about-content">
-        <motion.div 
+        <motion.div
           className="about-info white-card"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-         <p className="lead">
-  I am a Full-Stack Software Developer at Softoo Technology,
-  delivering robust and scalable web solutions.
-</p>
-<p>
-  I specialize in building efficient backend architectures and
-  intuitive frontend experiences, with a strong focus on performance,
-  scalability, and clean code.
-</p>
+          <p className="lead">
+            I am a Full-Stack Software Developer at Softoo Technology,
+            delivering robust and scalable web solutions.
+          </p>
+          <p>
+            I specialize in building efficient backend architectures and
+            intuitive frontend experiences, with a strong focus on performance,
+            scalability, and clean code.
+          </p>
 
-          
+
           <div className="education-stripe">
             <div className="stripe-item">
               <span className="label">Institution</span>

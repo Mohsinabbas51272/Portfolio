@@ -98,4 +98,26 @@
     .mobile-toggle-group {
         display: flex;
     }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .mobile-menu {
+        left: 16px;
+        right: 16px;
+        padding: 32px 24px;
+        z-index: 1001;
+    }
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
 }

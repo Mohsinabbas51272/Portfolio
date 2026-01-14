@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Github, Code } from 'lucide-react';
 import './Projects.css';
@@ -26,7 +27,7 @@ const Projects = () => {
       github: "https://github.com/Mohsinabbas51272/DistanceTimeSpeedCalculator",
       tags: ["JavaScript", "Algorithm", "UI"]
     },
-     {
+    {
       title: "Animation-Website",
       category: "React",
       description: "Animated website using React and Framer Motion.",
@@ -47,7 +48,7 @@ const Projects = () => {
       github: "https://github.com/Mohsinabbas51272/DataFetching.git",
       tags: ["JavaScript", "Algorithm", "API"]
     },
-    
+
   ];
 
   return (
@@ -59,7 +60,7 @@ const Projects = () => {
 
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="project-premium-card white-card"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -67,15 +68,15 @@ const Projects = () => {
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-          
-            
+
+
             <div className="project-top">
               <span className="cat">{project.category}</span>
               <div className="links">
                 <a href={project.github} target="_blank" rel="noreferrer"><Github size={20} /></a>
               </div>
             </div>
-            
+
             <div className="project-body">
               <h3>{project.title}</h3>
               <p>{project.description}</p>

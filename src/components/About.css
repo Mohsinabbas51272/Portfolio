@@ -89,4 +89,24 @@
     .about-content {
         grid-template-columns: 1fr;
     }
+
+    .education-stripe {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .lead {
+        text-align: center;
+    }
+
+    .about-info p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-box .number {
+        font-size: 2.25rem;
+    }
 }
