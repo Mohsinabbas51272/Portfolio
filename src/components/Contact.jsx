@@ -19,7 +19,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Save to Firebase
     const contactRef = ref(db, 'contact_responses');
     const newResponse = {
@@ -27,7 +27,7 @@ const Contact = () => {
       date: new Date().toLocaleString(),
       timestamp: Date.now()
     };
-    
+
     push(contactRef, newResponse)
       .then(() => {
         setSubmitted(true);
@@ -47,13 +47,13 @@ const Contact = () => {
         <div className="contact-details">
           <span className="text-gradient">04. Connection</span>
           <h2 className="section-title" style={{ textAlign: 'left' }}>Let's Build <br />Something Rare.</h2>
-          
+
           <div className="contact-list">
             <div className="contact-item">
               <Mail className="icon" size={24} />
               <div className="text">
                 <span className="label">Mail</span>
-                <span className="value">mohsinabbas@example.com</span>
+                <span className="value">mohsinabbas20191@example.com</span>
               </div>
             </div>
             <div className="contact-item">
@@ -69,7 +69,7 @@ const Contact = () => {
                 <span className="label">Phone</span>
                 <span className="value">0323-7086514</span>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
 
@@ -83,30 +83,30 @@ const Contact = () => {
           ) : (
             <>
               <div className="input-group">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
-                  placeholder="Full Name" 
-                  required 
+                  placeholder="Full Name"
+                  required
                   value={formData.name}
                   onChange={handleChange}
                 />
               </div>
               <div className="input-group">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
-                  placeholder="Email Address" 
-                  required 
+                  placeholder="Email Address"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                 />
               </div>
               <div className="input-group">
-                <textarea 
+                <textarea
                   name="project"
-                  placeholder="Tell me about your project" 
-                  rows="5" 
+                  placeholder="Tell me about your project"
+                  rows="5"
                   required
                   value={formData.project}
                   onChange={handleChange}

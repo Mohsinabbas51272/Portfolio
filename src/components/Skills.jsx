@@ -8,7 +8,6 @@ const Skills = () => {
   const skills = [
     { name: "Frontend-Architecture", level: "Expert", icon: <Zap /> },
     { name: "Backend Development", level: "advanced", icon: <Cpu /> },
-    { name: "Data-Structures & Algorithms", level: "Advanced", icon: <ShieldCheck /> },
     { name: "Responsive UI/UX", level: "Expert", icon: <Globe /> },
     { name: "RESTful APIs", level: "Advanced", icon: <Server /> },
     { name: "GraphQL", level: "Intermediate", icon: <Code /> },
