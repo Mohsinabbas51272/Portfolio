@@ -54,7 +54,6 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="section-header">
-        <span className="text-gradient">02. Projects</span>
         <h2 className="section-title">Projects</h2>
       </div>
 

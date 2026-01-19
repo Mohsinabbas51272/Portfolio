@@ -28,7 +28,6 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="section-header">
-        <span className="text-gradient">03. Expertise</span>
         <h2 className="section-title">Core Capabilities</h2>
       </div>
 

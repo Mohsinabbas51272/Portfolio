@@ -45,7 +45,6 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact-premium-grid">
         <div className="contact-details">
-          <span className="text-gradient">04. Connection</span>
           <h2 className="section-title" style={{ textAlign: 'left' }}>Let's Build <br />Something Rare.</h2>
 
           <div className="contact-list">
