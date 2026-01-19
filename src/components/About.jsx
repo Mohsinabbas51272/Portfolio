@@ -7,7 +7,6 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="section-header">
-        <span className="text-gradient">01. Discovery</span>
         <h2 className="section-title">Professional Background</h2>
       </div>
 
