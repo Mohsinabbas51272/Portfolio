@@ -18,13 +18,8 @@ const About = () => {
           viewport={{ once: true }}
         >
           <p className="lead">
-            I am a Full-Stack Software Developer at Softoo Technology,
-            delivering robust and scalable web solutions.
-          </p>
-          <p>
-            I specialize in building efficient backend architectures and
-            intuitive frontend experiences, with a strong focus on performance,
-            scalability, and clean code.
+            I am a Full-Stack Software Developer dedicated to building 
+            modern, efficient, and user-centric applications.
           </p>
 
 
